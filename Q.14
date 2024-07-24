@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h> 
+
+#define MAX 100
+
+int main() {
+    char str[MAX];
+    int length = 0;
+    printf("Name: R. Santhosh Kumar\n");
+    printf("Regno: 192211053\n");
+    printf("Enter a string: ");
+    fgets(str, MAX, stdin);
+    str[strcspn(str, "\n")] = 0;
+
+    while (str[length] != '\0') {
+        length++;
+    }
+
+    printf("The length of the string is: %d\n", length);
+
+    return 0;
+}
