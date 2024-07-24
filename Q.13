@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAX 100
+
+int main() {
+    char str[MAX], reversedStr[MAX];
+    int length, i, j;
+    printf("Name:R.Santhosh Kumar\n");
+    printf("Regno:192211053\n");
+    printf("Enter a string: ");
+    gets(str);
+
+    length = strlen(str);
+
+    for (i = length - 1, j = 0; i >= 0; i--, j++) {
+        reversedStr[j] = str[i];
+    }
+    reversedStr[j] = '\0';  
+
+    printf("Original string: %s\n", str);
+    printf("Reversed string: %s\n", reversedStr);
+
+    return 0;
+}
